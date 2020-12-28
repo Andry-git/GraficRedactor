@@ -30,7 +30,7 @@ public class Model extends Observable {
         this.sampleShape = sampleShape;
     }
 
-    public Model() {
+    private Model() {
         list = new ArrayList<>();
     }
 

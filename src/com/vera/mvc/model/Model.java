@@ -113,12 +113,12 @@ public class Model extends Observable {
         notifyObservers();
     }
     
-    public static Model singleton;
-    public static Model getSingleton(){
-    if(singleton == null){
-    singleton = new Model();
+    private static Model model;
+    public static Model getInstance(){
+    if(model == null){
+    model = new Model();
     }   
-    return singleton;
+    return model;
     }
 }
     

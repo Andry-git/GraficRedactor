@@ -5,6 +5,8 @@
  */
 package com.vera.mvc.model;
 
+
+import com.vera.mvc.Controller.Controller;
 import java.awt.Graphics2D;
 import java.awt.Shape;
 import java.awt.geom.AffineTransform;
@@ -110,5 +112,22 @@ public class Model extends Observable {
         setChanged();
         notifyObservers();
     }
-
+    
+    private static Model singleton;
+    public Controller value;
+    private Model(Controller value){
+     try {
+            Thread.sleep(1000);
+        } catch (InterruptedException ex) {
+            ex.printStackTrace();
+        }
+        this.value = value;
+    }
+    public Model getSingleton1(){
+    if(singleton == null){
+    singleton = new Model();
+    }   
+    return singleton;
+    }
 }
+    

@@ -113,7 +113,7 @@ public class Model extends Observable {
         notifyObservers();
     }
     
-    private static Model singleton;
+    public static Model singleton;
     public static Model getSingleton(){
     if(singleton == null){
     singleton = new Model();

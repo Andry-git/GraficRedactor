@@ -30,6 +30,14 @@ public class Model extends Observable {
         this.sampleShape = sampleShape;
     }
 
+    public static Model model;
+    public static synchronized Model getInstance(){
+    if(model == null){
+    model = new Model();
+    }   
+    return model;
+    }
+    
     private Model() {
         list = new ArrayList<>();
     }
@@ -113,12 +121,6 @@ public class Model extends Observable {
         notifyObservers();
     }
     
-    private static Model model;
-    public static Model getInstance(){
-    if(model == null){
-    model = new Model();
-    }   
-    return model;
-    }
+  
 }
     

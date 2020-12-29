@@ -7,7 +7,6 @@ package com.vera.mvc;
 
 
 import com.vera.mvc.Controller.Controller;
-import com.vera.mvc.model.Model;
 
 /**
  *
@@ -20,9 +19,7 @@ public class Mvc {
      */
     public static void main(String[] args) {
         new Controller();
-        //Model singleton = Model.getSingleton();
-        //С моделью тут она тоже запускается, но немного странно
-        //Её здесь писать не надо, но показываю, что так тоже можно
+       
     }
     
 }
